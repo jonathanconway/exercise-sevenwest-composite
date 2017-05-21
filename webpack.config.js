@@ -5,7 +5,8 @@ module.exports = {
     './src/index.js'
   ],
   output: {
-    filename: 'public/bundle.js'
+    filename: 'bundle.js',
+    path: resolve(__dirname, 'public')
   },
   module: {
     loaders: [
@@ -19,6 +20,24 @@ module.exports = {
           plugins: ['transform-runtime'],
           presets: ['es2015', 'stage-0', 'react']
         }
+      },
+      {
+        test: /\.(png|jpe?g)$/i,
+        loaders: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            query: {
+              progressive: true,
+              pngquant: {
+                quality: '65-90',
+                speed: 4,
+                optimizationLevel: 7
+              }
+            }
+          }
+        ]
       }
-  ]}
+    ]
+  }
 }
