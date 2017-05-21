@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": "webpack",
+    "deploy": "npm run build && gh-pages -d public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jonathan Conway",
@@ -17,6 +18,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-runtime": "^6.23.0",
+    "gh-pages": "^1.0.0",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
   },
