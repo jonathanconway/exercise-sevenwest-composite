@@ -21,5 +21,6 @@ npm start
 ## Caveats
 
 * Only tested on Chrome, Safari, Firefox, Mobile Safari (iPad).
-* Performance could be optimised further.
-* Wasn't sure whether the four images inside the rectangle should be further sub-divided. I figured not, as it's basically one image for that show.
+* Image compression technique could be optimised further.
+* Currently the same build config is used for dev as for production. For the purposes of this simple exercise, that seems sufficient. For a more complex exercise, separate dev and production configs might be appropriate.
+* The auto-reloading system is fairly primitive, relying on `nodemon` and `httpster`. Hot module reloading would be nicer.
