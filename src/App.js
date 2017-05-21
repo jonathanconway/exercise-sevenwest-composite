@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import tileImg from './tile.jpg';
-// import logoImg from './logo.png';
+import logoImg from './logo.png';
 
 import Block, { Image, Caption, CaptionLogo, CaptionText } from './Block';
 
